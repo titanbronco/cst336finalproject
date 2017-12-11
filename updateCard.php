@@ -15,7 +15,7 @@ $conn = getDatabaseConnection();
             WHERE name = :Name";
     //$np = array();
     
-    echo $sql;
+   // echo $sql;
     
     
     
@@ -25,7 +25,7 @@ $conn = getDatabaseConnection();
     $stmt = $conn->prepare($sql);
     $stmt->execute($np);
     
-    print_r($np);
+    //print_r($np);
     
     
     echo"Record has been updated!";
@@ -38,6 +38,7 @@ $conn = getDatabaseConnection();
 <html>
     <head>
         <title> Update User </title>
+        <link rel="stylesheet" href="css/styles.css" type="text/css" />
     </head>
     <body>
 
