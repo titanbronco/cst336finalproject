@@ -1,0 +1,26 @@
+body {
+     background-color: black;
+     color: gold;
+     font-size: 1em;
+     line-height: 1.5em;
+     font-size: 1.2em;
+     text-align: center;
+ }
+header {
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+}
+#wrapper {
+    margin: 0 auto;
+    width: 800px;
+    text-align: center !important; 
+    
+}
+
+a {
+    color: gold;
+}
+
+table {    
+    margin-left: 25%;
+}
