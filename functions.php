@@ -52,6 +52,19 @@ function getDatabaseConnection()
     return $records;
 }
 
+function displayStores(){
+    $conn = getDatabaseConnection();
+    
+    $sql = "select * from stores";
+    
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
+               
+    return $records;
+    
+}
+
 function numberCards($color) {
     $conn = getDatabaseConnection();
     $sql = "Select count(*) as c from cards where color='$color'";

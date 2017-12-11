@@ -63,11 +63,11 @@
                 $Cards = displayCards($sort, $color);
                 echo "<table id='table'>";
                 echo "<tr>";
-                echo "<td>'Card Name'</td>";
-                echo "<td>'Power'</td>";
-                echo "<td>'Color'</td>";
-                echo "<td>'Play Cost'</td>";
-                echo "<td>'Price in $'</td>";
+                echo "<td>Card Name</td>";
+                echo "<td>Power</td>";
+                echo "<td>Color</td>";
+                echo "<td>Play Cost</td>";
+                echo "<td>Price in $</td>";
                 foreach($Cards as $card) {
                     echo "<tr>";
                     echo "<td>". $card['name'] ."</td>";
@@ -79,7 +79,30 @@
                 }
                 echo "</table>";
                 echo "<br/>";
+                echo "<br/>";
                 
+                
+           ?>
+           
+           <h1> Store List</h1>
+           <?php
+                $Stores = displayStores();
+                echo "<table id='table'>";
+                echo "<tr>";
+                echo "<td>Store Name</td>";
+                echo "<td>Address</td>";
+                echo "<td>Cards Available?</td>";
+                foreach($Stores as $store) {
+                    echo "<tr>";
+                    echo "<td>". $store['storeName'] ."</td>";
+                    echo "<td>". $store['address'] ."</td>";
+                    echo "<td>". $store['available'] ."</td>";
+                    echo "</tr>";
+                }
+                echo "</table>";
+                echo "<br/>";
+                echo "<br/>";
+           
            ?>
 
 
