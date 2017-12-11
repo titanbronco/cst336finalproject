@@ -20,6 +20,8 @@ if (isset($_GET['addCard'])) {  //the add form has been submitted
     $stmt=$conn->prepare($sql);
     $stmt->execute($np);
     
+    print_r($np);
+    
     echo "Card Was Added!";
     
 }
@@ -75,7 +77,7 @@ if (isset($_GET['addCard'])) {  //the add form has been submitted
             <h2> Add a new card to the database </h2>
     
             <form method="GET">
-                Card Name:<input onchange=validateCard(); type="text" id="name" /> <span id="card-valid"></span>
+                Card Name:<input onchange=validateCard(); type="text" name="name" id="name" /> <span id="card-valid"></span>
                 <br />
                 Power:<input type="text" name="power"/>
                 <br/>
